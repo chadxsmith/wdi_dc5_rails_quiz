@@ -1,0 +1,8 @@
+
+
+<% @circuses.each do |circus| %>
+  <p><%=link_to circus.name, circus%></p>
+  <img src="<%= circus.image_url %>"
+<% end %>
+
+ 
