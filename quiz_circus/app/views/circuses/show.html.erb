@@ -1,3 +1,11 @@
-<h2>Edit your form</h2>
+<h2>Edit <%=@circus.name%></h2>
 
-<li><%= link_to "Edit", edit_circus %></li>     
+            <%@circus.entertainers.each do |entertainer| %>
+            <li><%=entertainer.name%></li>
+
+            <% end %>
+
+<br>
+
+<li><%=link_to "Edit", edit_circus_path(@circus) %></li>
+<li><%=link_to "Back", circuses_path%></li>
